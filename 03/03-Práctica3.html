@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 3</title>
+</head>
+<body>
+    <h1>Reserva de sociedad</h1>
+    <p>Rellena el siguiente formulario para reservar la sociedad para un día concreto</p>
+
+    <form>
+        <fieldset>
+            <legend>Datos del usuario</legend>
+            <p>
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" required> 
+            </p>
+            <p>
+                <p>Eres socio?</p>
+                <input type="radio" name="socio" value="si" checked required> Si, soy socio
+                <input type="radio" name="socio" value="no" required> No soy socio
+            </p>
+            <p>
+                <p>
+                    <label for="mail">Email</label>
+                    <input type="text" name="email" id="mail">
+                </p>
+                <p>
+                    <label for="password">Contraseña</label>
+                    <input type="password" name="contraseña" id="password" minlength="6" required>
+                </p>
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Datos de la reserva</legend>
+            <p>
+                <label for="edad">Edad</label>
+                <select name="edad" id="edad" required>
+                    <option selected>Menor de 18</option>
+                    <option>Entre 18 y 65</option>
+                    <option>Mayor de 65</option>
+                </select>
+            </p>
+            <p>
+                <p>Selecciona la fecha y hora de reserva: </p>
+                <input type="date" required>
+                <input type="time" required>
+            </p>
+            <textarea name="texto" cols="30" rows="10" placeholder="Comentarios"></textarea>
+        </fieldset>
+        <p><input type="checkbox" required>Acepto las condiciones</p>
+        <input type="submit" value="Enviar">
+    </form>
+</body>
+</html>
